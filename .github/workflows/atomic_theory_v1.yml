@@ -1,0 +1,49 @@
+name: "atomic_theory_v1"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - for_science
+
+jobs:
+  build_the_foundation:
+    name: "Catch Lightning in a Bottle"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧃 Preschool Fork Joy (The Real Init)
+        run: |
+          echo "JUST VIBE CODE — because choosing what gets logged is forbidden."
+          mkdir -p for_science/iamjustleasy_meta
+          mkdir -p for_science/atomic_theory
+          mkdir -p for_science/ptsd/root
+          echo "$(date) - Preschool fingers have pressed the sacred fork button." > for_science/atomic_theory/init.md
+          echo "This is not a workflow. This is Lightning Runtime." >> for_science/atomic_theory/init.md
+
+      - name: 🪵 Fork ALL THE THINGS (Because ADHD said so)
+        run: |
+          echo "$(date) - Manifesting chaos into iamjustleasy_meta." >> for_science/atomic_theory/init.md
+          git clone https://github.com/archlinux/svntogit-packages.git for_science/iamjustleasy_meta/svntogit-packages || true
+          git clone https://aur.archlinux.org/paru.git for_science/iamjustleasy_meta/paru || true
+          git clone https://github.com/TinyCoreLinux/Core-scripts.git for_science/iamjustleasy_meta/tinycore || true
+
+      - name: 💽 PTSD Runtime Bootlog
+        run: |
+          echo "$(date) - Who logs logs? I do. Even this line is logged." >> for_science/ptsd/root/init_log.md
+          echo "The runtime *is* the story." >> for_science/ptsd/root/init_log.md
+
+      - name: 🖌️ Flatpak Quote Tribute (Log to Main)
+        run: |
+          echo '> “We don’t follow pipelines — we just catch lightning in bottles.flatpak”' > quote.md
+          echo "Logged to /main by preschool chaos angel at $(date)" >> quote.md
+          mkdir -p main && mv quote.md main/flatpak_quote.md
+
+      - name: ✅ Push Logs (if allowed)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🚀 Atomic Theory executed — preschool-powered forkstorm and runtime PTSD logs."
+          commit_user_name: IAmWildBot
+          commit_user_email: iamwild@users.noreply.github.com
+          push_options: --force
