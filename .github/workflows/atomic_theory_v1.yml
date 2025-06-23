@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧃 Preschool Fork Joy (The Real Init)
+      - name: 🧬 Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: 🦃 Preschool Fork Joy (The Real Init)
         run: |
           echo "JUST VIBE CODE — because choosing what gets logged is forbidden."
           mkdir -p for_science/iamjustleasy_meta
@@ -22,7 +25,7 @@ jobs:
           echo "$(date) - Preschool fingers have pressed the sacred fork button." > for_science/atomic_theory/init.md
           echo "This is not a workflow. This is Lightning Runtime." >> for_science/atomic_theory/init.md
 
-      - name: 🪵 Fork ALL THE THINGS (Because ADHD said so)
+      - name: 🩵 Fork ALL THE THINGS (Because ADHD said so)
         run: |
           echo "$(date) - Manifesting chaos into iamjustleasy_meta." >> for_science/atomic_theory/init.md
           git clone https://github.com/archlinux/svntogit-packages.git for_science/iamjustleasy_meta/svntogit-packages || true
