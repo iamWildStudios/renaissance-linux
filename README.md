@@ -1,2 +1,1 @@
-# renaissance-linux
-An artist-first, lore-driven Linux distro built on broken boot scripts, vaporwave trauma, and hope.
+The preschool-powered Linux distro that vibes, memes, compiles and channels Odin via carrot-based runtime rituals.
